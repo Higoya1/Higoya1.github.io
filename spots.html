@@ -4,24 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>観光スポット ｜ 琉球王国の世界</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #fdf6ec; color: #333; }
-      nav { background-color: #7b1c1c; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; height: 64px; position: sticky; top: 0; z-index: 100; }
-      nav .logo { color: #f5d76e; font-size: 20px; font-weight: bold; text-decoration: none; letter-spacing: 2px; }
-      nav ul { list-style: none; display: flex; gap: 28px; }
-      nav ul li a { color: #f0c080; text-decoration: none; font-size: 14px; transition: color 0.3s; }
-      nav ul li a:hover { color: #fff; }
-
-      .page-header { background: linear-gradient(135deg, #7b1c1c, #c0392b); color: white; text-align: center; padding: 70px 20px; }
-      .page-header h1 { font-size: 42px; letter-spacing: 4px; margin-bottom: 10px; }
-      .page-header p { color: #fde8c8; font-size: 16px; }
-
       .section { max-width: 1100px; margin: 70px auto; padding: 0 20px; }
       .section h2 { font-size: 28px; color: #7b1c1c; letter-spacing: 3px; text-align: center; margin-bottom: 8px; }
-      .section-sub { text-align: center; color: #999; font-size: 13px; margin-bottom: 50px; }
 
-      /* スポットカード */
       .spots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
       .spot-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
       .spot-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
@@ -31,16 +18,15 @@
       .spot-card h3 { font-size: 19px; color: #333; margin-bottom: 8px; }
       .spot-card .location { font-size: 12px; color: #aaa; margin-bottom: 10px; }
       .spot-card p { font-size: 13px; color: #666; line-height: 1.8; }
-
-      footer { background-color: #3d0e0e; color: #aaa; text-align: center; padding: 40px 20px; font-size: 14px; line-height: 2; }
-      footer span { color: #f5d76e; }
     </style>
   </head>
   <body>
-
     <nav>
       <a class="logo" href="index.html">🌺 琉球王国の世界</a>
-      <ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="nav-menu">
         <li><a href="index.html">ホーム</a></li>
         <li><a href="history.html">歴史・文化</a></li>
         <li><a href="region.html">地域・変遷</a></li>
@@ -58,7 +44,6 @@
       <h2>歴史スポット</h2>
       <p class="section-sub">HISTORICAL SPOTS</p>
       <div class="spots-grid">
-
         <div class="spot-card">
           <div class="spot-img">🏯</div>
           <div class="spot-body">
@@ -68,7 +53,6 @@
             <p>琉球王国の王城。中国と日本の建築様式が融合した独特のグスク建築で、赤瓦と朱塗りが印象的。2000年に世界遺産登録。2019年の火災後、現在も復元工事が続いている。</p>
           </div>
         </div>
-
         <div class="spot-card">
           <div class="spot-img">🏰</div>
           <div class="spot-body">
@@ -78,7 +62,6 @@
             <p>三山時代の北山王の居城。沖縄県内最大規模の石積みを誇り、桜の名所としても知られる。標高100mの丘に築かれた城壁からは東シナ海が望める。</p>
           </div>
         </div>
-
         <div class="spot-card">
           <div class="spot-img">🗿</div>
           <div class="spot-body">
@@ -88,7 +71,6 @@
             <p>15世紀に護佐丸が整備したグスク。六つの郭からなる複雑な縄張りと、精巧な石積み技術が特徴。保存状態の良さからグスクの中でも特に高い評価を受ける。</p>
           </div>
         </div>
-
         <div class="spot-card">
           <div class="spot-img">⚡</div>
           <div class="spot-body">
@@ -98,7 +80,6 @@
             <p>海に突き出た丘に築かれた天然の要害。15世紀に阿麻和利（あまわり）が居城とした。琉球処分後に発掘された古銭・中国陶磁器などから活発な交易の跡がうかがえる。</p>
           </div>
         </div>
-
         <div class="spot-card">
           <div class="spot-img">🌿</div>
           <div class="spot-body">
@@ -108,7 +89,6 @@
             <p>琉球王家最大の別邸庭園。池を中心とした回遊式庭園で、琉球と中国の様式が融合した独特の景観を持つ。冊封使（中国の使節）をもてなす場としても使われた。</p>
           </div>
         </div>
-
         <div class="spot-card">
           <div class="spot-img">🌊</div>
           <div class="spot-body">
@@ -118,7 +98,6 @@
             <p>沖縄本島南部に位置する古城。アーチ状の門（アマツヅの門）が特徴的で、琉球開闢神話に登場する霊地として信仰を集めてきた。南城市の歴史観光の核のひとつ。</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -127,5 +106,6 @@
       <p>&copy; 2026 Higoya1 ／ 民俗学・沖縄史研究をもとに制作</p>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
