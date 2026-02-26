@@ -2,10 +2,93 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higoya1のサイト</title>
+    <style>
+      /* 全体のリセットと基本設定 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      /* ヘッダー */
+      header {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 18px;
+        color: #aaa;
+      }
+
+      /* メインコンテンツ */
+      main {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        text-align: center;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: #2c3e50;
+      }
+
+      .card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #666;
+      }
+
+      /* フッター */
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: #aaa;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello, World!</h1>
-    <p>はじめてのWebサイトです。</p>
+
+    <header>
+      <h1>Hello, World!</h1>
+      <p>はじめてのWebサイトです。</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>このサイトについて</h2>
+        <p>HTML と CSS を使って作ったはじめてのWebサイトです。<br>これからどんどん改良していきます。</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Higoya1</p>
+    </footer>
+
   </body>
 </html>
