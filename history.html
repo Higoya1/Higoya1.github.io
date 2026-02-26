@@ -4,102 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>歴史・文化 ｜ 琉球王国の世界</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .timeline-section { max-width: 900px; margin: 70px auto; padding: 0 20px; }
+      .timeline-section h2 { font-size: 28px; color: #7b1c1c; letter-spacing: 3px; text-align: center; margin-bottom: 8px; }
 
-      body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        background-color: #fdf6ec;
-        color: #333;
-      }
-
-      nav {
-        background-color: #7b1c1c;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 64px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      nav .logo {
-        color: #f5d76e;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        letter-spacing: 2px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 28px;
-      }
-
-      nav ul li a {
-        color: #f0c080;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover { color: #fff; }
-
-      /* ページヘッダー */
-      .page-header {
-        background: linear-gradient(135deg, #7b1c1c, #c0392b);
-        color: white;
-        text-align: center;
-        padding: 70px 20px;
-      }
-
-      .page-header h1 {
-        font-size: 42px;
-        letter-spacing: 4px;
-        margin-bottom: 10px;
-      }
-
-      .page-header p {
-        color: #fde8c8;
-        font-size: 16px;
-      }
-
-      /* タイムライン */
-      .timeline-section {
-        max-width: 900px;
-        margin: 70px auto;
-        padding: 0 20px;
-      }
-
-      .timeline-section h2 {
-        font-size: 28px;
-        color: #7b1c1c;
-        letter-spacing: 3px;
-        margin-bottom: 8px;
-        text-align: center;
-      }
-
-      .section-sub {
-        text-align: center;
-        color: #999;
-        font-size: 13px;
-        margin-bottom: 50px;
-      }
-
-      .timeline {
-        position: relative;
-        padding-left: 40px;
-        border-left: 3px solid #c0392b;
-      }
-
-      .timeline-item {
-        position: relative;
-        margin-bottom: 44px;
-      }
-
+      .timeline { position: relative; padding-left: 40px; border-left: 3px solid #c0392b; }
+      .timeline-item { position: relative; margin-bottom: 44px; }
       .timeline-item::before {
         content: '';
         position: absolute;
@@ -111,98 +22,27 @@
         border-radius: 50%;
         border: 3px solid #fdf6ec;
       }
+      .timeline-item .year { font-size: 13px; color: #c0392b; font-weight: bold; margin-bottom: 4px; letter-spacing: 1px; }
+      .timeline-item h3 { font-size: 18px; color: #333; margin-bottom: 8px; }
+      .timeline-item p { font-size: 14px; color: #666; line-height: 1.9; }
 
-      .timeline-item .year {
-        font-size: 13px;
-        color: #c0392b;
-        font-weight: bold;
-        margin-bottom: 4px;
-        letter-spacing: 1px;
-      }
-
-      .timeline-item h3 {
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 8px;
-      }
-
-      .timeline-item p {
-        font-size: 14px;
-        color: #666;
-        line-height: 1.9;
-      }
-
-      /* 文化セクション */
-      .culture-section {
-        background-color: #7b1c1c;
-        padding: 70px 20px;
-      }
-
-      .culture-section h2 {
-        font-size: 28px;
-        color: #f5d76e;
-        letter-spacing: 3px;
-        text-align: center;
-        margin-bottom: 8px;
-      }
-
-      .culture-section .section-sub {
-        color: #f0c080;
-        margin-bottom: 50px;
-      }
-
-      .culture-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        max-width: 1000px;
-        margin: 0 auto;
-        justify-content: center;
-      }
-
-      .culture-card {
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.15);
-        border-radius: 16px;
-        padding: 32px 24px;
-        width: 280px;
-        color: white;
-      }
-
-      .culture-card .icon {
-        font-size: 40px;
-        margin-bottom: 14px;
-      }
-
-      .culture-card h3 {
-        font-size: 18px;
-        color: #f5d76e;
-        margin-bottom: 10px;
-      }
-
-      .culture-card p {
-        font-size: 13px;
-        color: #fde8c8;
-        line-height: 1.8;
-      }
-
-      footer {
-        background-color: #3d0e0e;
-        color: #aaa;
-        text-align: center;
-        padding: 40px 20px;
-        font-size: 14px;
-        line-height: 2;
-      }
-
-      footer span { color: #f5d76e; }
+      .culture-section { background-color: #7b1c1c; padding: 70px 20px; }
+      .culture-section h2 { font-size: 28px; color: #f5d76e; letter-spacing: 3px; text-align: center; margin-bottom: 8px; }
+      .culture-section .section-sub { color: #f0c080; }
+      .culture-cards { display: flex; flex-wrap: wrap; gap: 24px; max-width: 1000px; margin: 0 auto; justify-content: center; }
+      .culture-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 32px 24px; width: 280px; color: white; }
+      .culture-card .icon { font-size: 40px; margin-bottom: 14px; }
+      .culture-card h3 { font-size: 18px; color: #f5d76e; margin-bottom: 10px; }
+      .culture-card p { font-size: 13px; color: #fde8c8; line-height: 1.8; }
     </style>
   </head>
   <body>
-
     <nav>
       <a class="logo" href="index.html">🌺 琉球王国の世界</a>
-      <ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="nav-menu">
         <li><a href="index.html">ホーム</a></li>
         <li><a href="history.html">歴史・文化</a></li>
         <li><a href="region.html">地域・変遷</a></li>
@@ -216,81 +56,67 @@
       <p>琉球王国の歩みと、独自の文化を探る</p>
     </div>
 
-    <!-- 歴史タイムライン -->
     <div class="timeline-section">
       <h2>琉球王国の歴史</h2>
       <p class="section-sub">HISTORY</p>
       <div class="timeline">
-
         <div class="timeline-item">
           <div class="year">12世紀頃</div>
           <h3>按司の時代</h3>
           <p>沖縄各地に「按司（あじ）」と呼ばれる豪族が割拠し、グスク（城）を築いた。按司たちは農業や交易を基盤に勢力を拡大していった。</p>
         </div>
-
         <div class="timeline-item">
           <div class="year">14世紀</div>
           <h3>三山時代</h3>
           <p>沖縄本島は北山・中山・南山の三つの勢力に分かれて争った。それぞれが中国（明）と朝貢関係を結び、冊封体制に組み込まれた。</p>
         </div>
-
         <div class="timeline-item">
           <div class="year">1429年</div>
           <h3>琉球王国の統一</h3>
           <p>中山王・尚巴志（しょうはし）が三山を統一し、琉球王国が成立。首里城を王都として、東アジア・東南アジアとの交易で繁栄した。</p>
         </div>
-
         <div class="timeline-item">
           <div class="year">15〜16世紀</div>
           <h3>大交易時代</h3>
           <p>「万国津梁（ばんこくしんりょう）」を掲げ、中国・日本・朝鮮・東南アジア各地と活発な交易を展開。琉球の黄金時代を迎える。</p>
         </div>
-
         <div class="timeline-item">
           <div class="year">1609年</div>
           <h3>薩摩藩の侵攻</h3>
           <p>島津氏率いる薩摩藩が琉球に侵攻し、尚寧王が降伏。以後、琉球は薩摩藩の支配下に置かれながらも、清（中国）との冊封関係を維持する「両属」の状態が続いた。</p>
         </div>
-
         <div class="timeline-item">
           <div class="year">1879年</div>
           <h3>琉球処分・沖縄県設置</h3>
           <p>明治政府が琉球藩を廃し、沖縄県を設置。約450年続いた琉球王国が終焉を迎えた。最後の国王・尚泰は東京に移された。</p>
         </div>
-
       </div>
     </div>
 
-    <!-- 文化 -->
     <div class="culture-section">
       <h2>琉球の文化</h2>
       <p class="section-sub">CULTURE</p>
       <div class="culture-cards">
-
         <div class="culture-card">
           <div class="icon">🎭</div>
           <h3>組踊（くみおどり）</h3>
           <p>1719年に玉城朝薫が創始した琉球の古典芸能。音楽・舞踊・台詞が一体となった総合芸術で、2010年にユネスコ無形文化遺産に登録された。</p>
         </div>
-
         <div class="culture-card">
           <div class="icon">👘</div>
           <h3>紅型（びんがた）</h3>
           <p>琉球王国で発展した染色技法。鮮やかな色彩と大胆な文様が特徴で、王族や士族の衣装として用いられた。現在も沖縄を代表する伝統工芸である。</p>
         </div>
-
         <div class="culture-card">
           <div class="icon">🎵</div>
           <h3>琉球音楽・三線</h3>
           <p>三線（さんしん）は琉球の代表的な弦楽器。中国の三弦が起源とされ、独特の音色は琉球音楽の根幹をなす。民謡から古典音楽まで幅広く使われる。</p>
         </div>
-
         <div class="culture-card">
           <div class="icon">🏛️</div>
           <h3>グスク文化</h3>
           <p>沖縄各地に残る城（グスク）は、琉球独自の石積み建築技術を示す。首里城をはじめ、今帰仁城・中城城など9件が世界遺産に登録されている。</p>
         </div>
-
       </div>
     </div>
 
@@ -299,5 +125,6 @@
       <p>&copy; 2026 Higoya1 ／ 民俗学・沖縄史研究をもとに制作</p>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
