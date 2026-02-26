@@ -1,0 +1,159 @@
+/* ===== リセット・共通 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fdf6ec;
+  color: #333;
+}
+
+/* ===== ナビゲーション ===== */
+nav {
+  background-color: #7b1c1c;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  color: #f5d76e;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul li a {
+  color: #f0c080;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover { color: #fff; }
+
+/* ===== ハンバーガー ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #f5d76e;
+  transition: all 0.3s;
+}
+
+/* ===== ページヘッダー ===== */
+.page-header {
+  background: linear-gradient(135deg, #7b1c1c, #c0392b);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.page-header p { color: #fde8c8; font-size: 16px; }
+
+/* ===== セクション共通 ===== */
+.section-sub {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+
+/* ===== フッター ===== */
+footer {
+  background-color: #3d0e0e;
+  color: #aaa;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+
+footer span { color: #f5d76e; }
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .hamburger { display: flex; }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: #7b1c1c;
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 0;
+    z-index: 200;
+  }
+
+  nav ul.open { display: flex; }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 15px;
+  }
+
+  .page-header h1 { font-size: 28px; }
+  .page-header { padding: 50px 16px; }
+
+  /* トップページ */
+  .hero h1 { font-size: 32px; }
+  .hero { padding: 60px 16px; }
+  .hero p { font-size: 15px; }
+  .cards { flex-direction: column; align-items: center; }
+  .card { width: 100%; max-width: 400px; }
+
+  /* 歴史・文化 */
+  .culture-cards { flex-direction: column; align-items: center; }
+  .culture-card { width: 100%; max-width: 400px; }
+
+  /* 地域・変遷 */
+  .region-cards { flex-direction: column; align-items: center; }
+  .region-card { width: 100%; max-width: 400px; }
+  table { font-size: 12px; }
+  thead th, tbody td { padding: 10px 12px; }
+
+  /* 観光スポット */
+  .spots-grid { grid-template-columns: 1fr; }
+
+  /* クイズ */
+  #choices { grid-template-columns: 1fr; }
+
+  /* セクション余白 */
+  .section { margin: 40px auto; }
+  .timeline-section { margin: 40px auto; }
+}
