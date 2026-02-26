@@ -4,58 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>琉球王国の世界</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        background-color: #fdf6ec;
-        color: #333;
-      }
-
-      /* ナビゲーション */
-      nav {
-        background-color: #7b1c1c;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 64px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      nav .logo {
-        color: #f5d76e;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        letter-spacing: 2px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 28px;
-      }
-
-      nav ul li a {
-        color: #f0c080;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #fff;
-      }
-
-      /* ヒーローセクション */
       .hero {
         background: linear-gradient(135deg, #7b1c1c 0%, #c0392b 40%, #e67e22 100%);
         color: white;
@@ -64,7 +14,6 @@
         position: relative;
         overflow: hidden;
       }
-
       .hero::before {
         content: '🌺';
         position: absolute;
@@ -73,7 +22,6 @@
         top: -60px;
         left: -60px;
       }
-
       .hero::after {
         content: '🌺';
         position: absolute;
@@ -82,21 +30,8 @@
         bottom: -60px;
         right: -60px;
       }
-
-      .hero h1 {
-        font-size: 56px;
-        letter-spacing: 6px;
-        margin-bottom: 16px;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      }
-
-      .hero p {
-        font-size: 18px;
-        color: #fde8c8;
-        margin-bottom: 40px;
-        line-height: 1.8;
-      }
-
+      .hero h1 { font-size: 56px; letter-spacing: 6px; margin-bottom: 16px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+      .hero p { font-size: 18px; color: #fde8c8; margin-bottom: 40px; line-height: 1.8; }
       .hero .btn {
         display: inline-block;
         background-color: #f5d76e;
@@ -108,33 +43,11 @@
         font-size: 16px;
         transition: transform 0.2s, box-shadow 0.2s;
       }
+      .hero .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
-      .hero .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      }
+      section { padding: 80px 20px; }
+      section h2 { text-align: center; font-size: 32px; margin-bottom: 12px; color: #7b1c1c; letter-spacing: 3px; }
 
-      /* セクション共通 */
-      section {
-        padding: 80px 20px;
-      }
-
-      section h2 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 12px;
-        color: #7b1c1c;
-        letter-spacing: 3px;
-      }
-
-      .section-sub {
-        text-align: center;
-        color: #999;
-        margin-bottom: 50px;
-        font-size: 14px;
-      }
-
-      /* コンテンツカード */
       .cards {
         display: flex;
         gap: 24px;
@@ -143,7 +56,6 @@
         flex-wrap: wrap;
         justify-content: center;
       }
-
       .card {
         background: white;
         border-radius: 16px;
@@ -156,89 +68,37 @@
         transition: transform 0.2s, box-shadow 0.2s;
         border-top: 4px solid #c0392b;
       }
+      .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+      .card .icon { font-size: 48px; margin-bottom: 16px; }
+      .card h3 { font-size: 18px; margin-bottom: 10px; color: #7b1c1c; }
+      .card p { font-size: 13px; color: #888; line-height: 1.6; }
 
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-      }
-
-      .card .icon {
-        font-size: 48px;
-        margin-bottom: 16px;
-      }
-
-      .card h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #7b1c1c;
-      }
-
-      .card p {
-        font-size: 13px;
-        color: #888;
-        line-height: 1.6;
-      }
-
-      /* 紹介セクション */
-      .about {
-        background-color: #7b1c1c;
-        color: white;
-        text-align: center;
-      }
-
-      .about h2 {
-        color: #f5d76e;
-      }
-
-      .about p {
-        max-width: 700px;
-        margin: 0 auto;
-        font-size: 16px;
-        line-height: 2;
-        color: #fde8c8;
-      }
-
-      /* フッター */
-      footer {
-        background-color: #3d0e0e;
-        color: #aaa;
-        text-align: center;
-        padding: 40px 20px;
-        font-size: 14px;
-        line-height: 2;
-      }
-
-      footer span {
-        color: #f5d76e;
-      }
+      .about { background-color: #7b1c1c; color: white; text-align: center; }
+      .about h2 { color: #f5d76e; }
+      .about p { max-width: 700px; margin: 0 auto; font-size: 16px; line-height: 2; color: #fde8c8; }
     </style>
   </head>
   <body>
-
     <nav>
-  <a class="logo" href="index.html">🌺 琉球王国の世界</a>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul id="nav-menu">
-    <li><a href="index.html">ホーム</a></li>
-    <li><a href="history.html">歴史・文化</a></li>
-    <li><a href="region.html">地域・変遷</a></li>
-    <li><a href="spots.html">観光スポット</a></li>
-    <li><a href="quiz.html">クイズ</a></li>
-  </ul>
-</nav>
+      <a class="logo" href="index.html">🌺 琉球王国の世界</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="nav-menu">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="history.html">歴史・文化</a></li>
+        <li><a href="region.html">地域・変遷</a></li>
+        <li><a href="spots.html">観光スポット</a></li>
+        <li><a href="quiz.html">クイズ</a></li>
+      </ul>
+    </nav>
 
-    <!-- ヒーロー -->
     <div class="hero">
       <h1>琉球王国の世界</h1>
       <p>海と太陽に育まれた、独自の歴史と文化を持つ王国。<br>その軌跡を、ここから探求しよう。</p>
       <a class="btn" href="history.html">歴史を探る →</a>
     </div>
 
-    <!-- コンテンツメニュー -->
     <section>
       <h2>コンテンツ</h2>
       <p class="section-sub">CONTENTS</p>
@@ -266,7 +126,6 @@
       </div>
     </section>
 
-    <!-- サイトについて -->
     <section class="about">
       <h2>このサイトについて</h2>
       <p class="section-sub" style="color:#f0c080;">ABOUT</p>
@@ -279,5 +138,6 @@
       <p>&copy; 2026 Higoya1 ／ 民俗学・沖縄史研究をもとに制作</p>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
