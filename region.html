@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域・変遷 ｜ 琉球王国の世界</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #fdf6ec; color: #333; }
+      nav { background-color: #7b1c1c; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; height: 64px; position: sticky; top: 0; z-index: 100; }
+      nav .logo { color: #f5d76e; font-size: 20px; font-weight: bold; text-decoration: none; letter-spacing: 2px; }
+      nav ul { list-style: none; display: flex; gap: 28px; }
+      nav ul li a { color: #f0c080; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+      nav ul li a:hover { color: #fff; }
+
+      .page-header { background: linear-gradient(135deg, #7b1c1c, #c0392b); color: white; text-align: center; padding: 70px 20px; }
+      .page-header h1 { font-size: 42px; letter-spacing: 4px; margin-bottom: 10px; }
+      .page-header p { color: #fde8c8; font-size: 16px; }
+
+      .section { max-width: 960px; margin: 70px auto; padding: 0 20px; }
+      .section h2 { font-size: 28px; color: #7b1c1c; letter-spacing: 3px; text-align: center; margin-bottom: 8px; }
+      .section-sub { text-align: center; color: #999; font-size: 13px; margin-bottom: 50px; }
+
+      /* 説明ボックス */
+      .intro-box {
+        background: white;
+        border-left: 5px solid #c0392b;
+        border-radius: 8px;
+        padding: 28px 32px;
+        margin-bottom: 50px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        line-height: 1.9;
+        font-size: 15px;
+        color: #555;
+      }
+
+      /* 変遷テーブル */
+      .table-wrap { overflow-x: auto; margin-bottom: 60px; }
+      table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+      thead { background-color: #7b1c1c; color: white; }
+      thead th { padding: 16px 20px; font-size: 14px; letter-spacing: 1px; text-align: left; }
+      tbody tr { border-bottom: 1px solid #f0e8d8; transition: background 0.2s; }
+      tbody tr:hover { background-color: #fff8f0; }
+      tbody td { padding: 14px 20px; font-size: 14px; color: #555; line-height: 1.7; }
+      tbody td:first-child { font-weight: bold; color: #7b1c1c; }
+
+      /* カードグリッド */
+      .region-cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+      .region-card { background: white; border-radius: 14px; padding: 28px 24px; width: 280px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); border-top: 4px solid #c0392b; }
+      .region-card h3 { font-size: 17px; color: #7b1c1c; margin-bottom: 10px; }
+      .region-card p { font-size: 13px; color: #666; line-height: 1.8; }
+
+      footer { background-color: #3d0e0e; color: #aaa; text-align: center; padding: 40px 20px; font-size: 14px; line-height: 2; }
+      footer span { color: #f5d76e; }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <a class="logo" href="index.html">🌺 琉球王国の世界</a>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="history.html">歴史・文化</a></li>
+        <li><a href="region.html">地域・変遷</a></li>
+        <li><a href="spots.html">観光スポット</a></li>
+        <li><a href="quiz.html">クイズ</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <h1>🗺️ 地域・変遷</h1>
+      <p>間切・村の行政区分から現在の市町村へ</p>
+    </div>
+
+    <!-- 間切制度の説明 -->
+    <div class="section">
+      <h2>間切制度とは</h2>
+      <p class="section-sub">MAGIRI SYSTEM</p>
+      <div class="intro-box">
+        琉球王国では、本島・離島の地域行政単位として「間切（まぎり）」が用いられていた。間切はさらに「村（むら）」に細分化され、各村には地頭代・掟（おきて）などの役人が置かれた。1879年の琉球処分後、間切は明治政府の行政区分に組み込まれ、1908年の「沖縄県及島嶼町村制」施行により間切は廃止、現在の「村」「町」「市」へと再編されていった。
+      </div>
+
+      <h2>行政区分の変遷</h2>
+      <p class="section-sub">TRANSITION</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>琉球王国時代（間切）</th>
+              <th>明治期（間切→村）</th>
+              <th>現在の市町村</th>
+              <th>備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>首里</td>
+              <td>首里区</td>
+              <td>那覇市</td>
+              <td>1954年那覇市に編入</td>
+            </tr>
+            <tr>
+              <td>那覇</td>
+              <td>那覇区</td>
+              <td>那覇市</td>
+              <td>1921年那覇市制施行</td>
+            </tr>
+            <tr>
+              <td>浦添間切</td>
+              <td>浦添村</td>
+              <td>浦添市</td>
+              <td>1975年市制施行</td>
+            </tr>
+            <tr>
+              <td>中城間切</td>
+              <td>中城村</td>
+              <td>中城村</td>
+              <td>現在も村のまま</td>
+            </tr>
+            <tr>
+              <td>越来間切</td>
+              <td>越来村</td>
+              <td>沖縄市</td>
+              <td>美里村と合併→コザ市→沖縄市</td>
+            </tr>
+            <tr>
+              <td>具志川間切</td>
+              <td>具志川村</td>
+              <td>うるま市</td>
+              <td>2005年4町村合併</td>
+            </tr>
+            <tr>
+              <td>今帰仁間切</td>
+              <td>今帰仁村</td>
+              <td>今帰仁村</td>
+              <td>現在も村のまま</td>
+            </tr>
+            <tr>
+              <td>名護間切</td>
+              <td>名護村</td>
+              <td>名護市</td>
+              <td>1970年市制施行</td>
+            </tr>
+            <tr>
+              <td>島尻大里間切</td>
+              <td>大里村</td>
+              <td>南城市</td>
+              <td>2006年4町村合併</td>
+            </tr>
+            <tr>
+              <td>豊見城間切</td>
+              <td>豊見城村</td>
+              <td>豊見城市</td>
+              <td>2002年市制施行</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>地域別の特色</h2>
+      <p class="section-sub">REGIONAL FEATURES</p>
+      <div class="region-cards">
+        <div class="region-card">
+          <h3>🏯 首里・那覇地域</h3>
+          <p>琉球王国の中心地。首里城を擁する王都として政治・文化の中枢を担った。現在の那覇市に統合され、国際通りや首里城公園が観光の核となっている。</p>
+        </div>
+        <div class="region-card">
+          <h3>🌊 北部（山原）地域</h3>
+          <p>「やんばる」と呼ばれる山岳・森林地帯。今帰仁城など三山時代の遺跡が多く残る。2021年に「奄美大島、徳之島、沖縄島北部及び西表島」が世界自然遺産に登録された。</p>
+        </div>
+        <div class="region-card">
+          <h3>🏝️ 中部地域</h3>
+          <p>中城城・勝連城など世界遺産グスクが集中する。戦後は米軍基地が多く置かれ、コザ（現沖縄市）は独自の文化を育んだ。</p>
+        </div>
+        <div class="region-card">
+          <h3>🌺 南部地域</h3>
+          <p>沖縄戦の激戦地。玉城城・知念城などの按司時代のグスクが残る。南城市・糸満市などを中心に、戦跡と古代史の両方を伝える地域。</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><span>🌺 琉球王国の世界</span></p>
+      <p>&copy; 2026 Higoya1 ／ 民俗学・沖縄史研究をもとに制作</p>
+    </footer>
+
+  </body>
+</html>
